@@ -37,13 +37,27 @@ public void tester()
 }
 public boolean palindrome(String word)
 {
-  //your code here
-  return false;
+if(word.length() < 1){
+    return true;
+  }
+  
+  String palindrome = new String();
+  for (int i = word.length()-1; i >= 0; i--){
+    palindrome = palindrome + word.substring(i, i+1);
+   }
+  return (palindrome.equals(word));
 }
+
 public String reverse(String str)
 {
-    String sNew = new String();
-    //your code here
-    return sNew;
+   if (str.length() < 2){
+    return str;
+  }
+  
+  String sNew = new String();
+  for (int i = str.length()-1; i >= 0; i--){
+    sNew = sNew + str.substring(i, i+1);
+  }
+  return sNew;
 }
 }
